@@ -2,7 +2,8 @@ FROM golang:1.21
 
 WORKDIR /app
 
-COPY catgpt/go.mod catgpt/go.sum .
+COPY catgpt/go.mod .
+COPY catgpt/go.sum .
 RUN go mod download && \
     go mod verify
 COPY catgpt .
